@@ -16,8 +16,8 @@ from random import randint, choice
 
 GIF_GENERATOR = False
 
-n = 1000
-m = 1000
+n = 40
+m = 40
 
 shape = (n, m)
 maze = np.ones(shape, dtype=int)
