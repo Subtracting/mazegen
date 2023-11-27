@@ -133,6 +133,8 @@ while wall_list != set():
         plt.close()
         filenames.append(f"maze{i}.png")
 
+np.savetxt("maze.out", maze, delimiter=",")
+
 if GIF_GENERATOR == True:
     for filename in filenames:
         images.append(imageio.imread(filename))
