@@ -16,8 +16,8 @@ from random import randint, choice
 
 GIF_GENERATOR = False
 
-n = 40
-m = 40
+n = 100
+m = 100
 
 shape = (n, m)
 maze = np.ones(shape, dtype=int)
@@ -133,7 +133,7 @@ while wall_list != set():
         plt.close()
         filenames.append(f"maze{i}.png")
 
-np.savetxt("maze.out", maze, delimiter=",")
+np.savetxt(f"maze.out_{m}_{n}", maze, delimiter=",")
 
 if GIF_GENERATOR == True:
     for filename in filenames:

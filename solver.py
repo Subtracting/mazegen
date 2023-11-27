@@ -44,7 +44,7 @@ def adjacent_paths(maze, cell, n, m):
     return cell_path
 
 
-maze = np.loadtxt("maze.out", delimiter=",")
+maze = np.loadtxt("maze.out_100_100", delimiter=",")
 width, height = maze.shape
 
 
@@ -76,7 +76,7 @@ goal = (width, height)
 root = (0, 0)
 paths = maze_BFS(maze, root, goal)
 
-end = (39, 39)
+end = (99, 99)
 
 shortest_path = []
 cell_path = end
@@ -94,4 +94,6 @@ fig = plt.imshow(maze_path, cmap="gist_gray_r")
 plt.axis("off")
 fig.axes.get_xaxis().set_visible(False)
 fig.axes.get_yaxis().set_visible(False)
-plt.savefig(f"maze_solved_2.png", bbox_inches="tight", dpi=300, pad_inches=0)
+plt.savefig(
+    f"maze_solved_{width}_{height}.png", bbox_inches="tight", dpi=300, pad_inches=0
+)
